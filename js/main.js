@@ -1,10 +1,10 @@
 function meow(){
     
-    document.getElementById("output3").innerHTML = "main.meow is called";
+    document.getElementById("output2").innerHTML = "main.meow is called";
 
 }
 
 function arf(){
-    document.getElementById("output3").innerHTML = "arf arf";
+    document.getElementById("output2").innerHTML = "arf arf";
 
 }
