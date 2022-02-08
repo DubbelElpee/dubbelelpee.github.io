@@ -1,5 +1,5 @@
 function myFunction() {
-    document.getElementById("output").innerHTML = "Luc P";
+    document.getElementById("outpu3t").innerHTML ="Hi! I am method from an external script";
   }
 /*
   function copyInfo(){

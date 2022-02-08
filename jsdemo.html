@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <script src="js/main.js"></script>
+
     <title>JS DEMO</title>
 </head>
+
 <body>
     Hi! This is a JS demo!
 
-    <!--
-    <p id="output"></p>
-    <p id="output2"></p>
-    <p id="output3"></p>
-    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
 
+    <p id="output1"></p>
+    <p id="output2"></p>
+    
+
+    <input type="text" id="input1" name="name" required minlength="4" maxlength="8" size="10">
 
 
     <script>
-        //alert('hi there!');
-        let a=3;
-        let b=4;
-        var c= a+b;
-        document.getElementById("output").innerHTML = "Hello JavaScript"+c;
+        alert('Hi This is a script within the BODY element');
+
+        document.getElementById("output1").innerHTML = "Holy cow! I am now changing the content of p element";
+        document.getElementById("output2").innerHTML = document.getElementById("output1").innerHTML;
 
     </script>
 
-
-    <script src="anotherDemo.js"></script>
-
--->
-    
+    <button onclick="meow()">Meow</button>
+    <script src="js/anotherDemo.js"></script>
 
 </body>
+
 </html>
