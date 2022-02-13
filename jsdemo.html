@@ -11,20 +11,40 @@
     <title>JS DEMO</title>
 </head>
 
-<body ">
-    Hi! This is a JS demo!
-    <p id="output1"></p>
-    <p id="output2"></p>
-    <input type="text" id="input1" name="name" required minlength="4" maxlength="8" size="10">
-    <script>
-        alert('Hi This is a script within the BODY element');
-        document.getElementById("output1").innerHTML = "Holy cow! I am now changing the content of p element";
-        document.getElementById("output2").innerHTML = document.getElementById("output1").innerHTML;
-    </script>
+<body onload="loaded()">
+    <h1>JavaScript demo</h1>
+    <p id="para1"></p>
+    <p id="para2">This is p2</p>
 
-    <button onclick="meow()">Meow</button>
+
+    <button onclick="clickMe()">Click me!</button>
+    <br/>
     
-    <script src="js/anotherDemo.js"></script>
+    <button onclick="changeStyle()">Change style of p2</button>
+    <br/>
+    <br/>
+    <button onclick="removePara2()">Remove p2 (cannot undo!)</button>
+    <br/>
+    <br/>
+
+    <img src="img/donkey.jpeg" id="img1">
+    <br/>
+    <button onclick="showCow()">Show cow</button>
+    <button onclick="showCat()">Show cat</button>
+    <button onclick="showDog()">Show dog</button>
+    <button onclick="hideImage()" id="hideButton">Hide animal</button>
+    <button onclick="showImage()" id ="showButton">Show animal</button>
+
+<br/><br/>
+    <button onclick="createParagraph()">Create a new paragraph</button>
+
+    <br/><br/>
+
+
+
+
+    
+
 
 </body>
 
