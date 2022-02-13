@@ -13,24 +13,19 @@
 
 <body>
     Hi! This is a JS demo!
-
-
     <p id="output1"></p>
     <p id="output2"></p>
-    
-
     <input type="text" id="input1" name="name" required minlength="4" maxlength="8" size="10">
-
-
     <script>
         alert('Hi This is a script within the BODY element');
-
         document.getElementById("output1").innerHTML = "Holy cow! I am now changing the content of p element";
         document.getElementById("output2").innerHTML = document.getElementById("output1").innerHTML;
-
     </script>
 
     <button onclick="meow()">Meow</button>
+    window.onload = function() {
+        moo();
+      };
     <script src="js/anotherDemo.js"></script>
 
 </body>
