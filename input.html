@@ -9,19 +9,19 @@
   </h4> 
   
   <label for="domTextElement">Name: </label>
-  <input type="text" id="domTextElement" > 
+  <input type="text" id="inputField" > 
   
   <button type="button"  onclick="getValueInput()"> 
       click me!! 
   </button> 
   
-  <p id="valueInput"></p> 
+  <p id="output"></p> 
 
   <script> 
 
     const getValueInput = () =>{
-      let inputValue = document.getElementById("domTextElement").value; 
-      document.getElementById("valueInput").innerHTML = inputValue; 
+      let inputValue = document.getElementById("inputField").value; 
+      document.getElementById("output").innerHTML = inputValue; 
     }
     
   </script> 
