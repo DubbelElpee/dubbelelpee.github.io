@@ -12,7 +12,7 @@ function loaded(){
 }
 
 function clickMe(){    
-    document.getElementById("para2").innerHTML = "OMG! You clicked a button!";
+    document.getElementById("para2").innerText = "OMG! You clicked a button!";
 }
 
 function changeStyle(){
