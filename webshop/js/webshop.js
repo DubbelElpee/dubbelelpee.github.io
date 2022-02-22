@@ -10,6 +10,8 @@ var binPurchased=0;
 var staplerPurchased=0;
 var pencilholderPurchased=0;
 
+var totalPrice=0;
+
 
 
 function loaded(){   
@@ -25,26 +27,66 @@ function loaded(){
 }
 
 function binBuy() {
+
     console.log('bin');
     binPurchased++;
     binStock--;
     document.getElementById("s1").innerText="Stock "+binStock;
 
+    if(binStock==0){
+        document.getElementById("s1").innerText="OUT OF STOCK";
+        document.getElementById("binBuyButton").style.display="none";
+    }
+
 }
 
 function staplerBuy(){
-    stapler_p++;
-    stapler_s--;
-    document.getElementById("s2").innerText="Stock "+staplerStock;
+    if(staplerStock>0){
+        staplerPurchased++;
+        staplerStock--;
+        document.getElementById("s2").innerText="Stock "+staplerStock;
+    }
 }
 
 function pencilholderBuy(){
-    pencilholder_p++;
-    pencilholder_s--;
+    pencilholderPurchased++;
+    pencilholderStock--;
     document.getElementById("s3").innerText="Stock "+pencilholderStock;
 }
 
 function checkOut(){
+    if(binPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = binPurchased  +" bin(s) x "+ binPrice + " = "+binPurchased*binPrice;
+        document.body.appendChild(para);
+
+        totalPrice +=binPurchased*binPrice;
+    }
+
+    if(staplerPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = staplerPurchased  +" stapler(s) x "+ staplerPrice + " = "+staplerPurchased*staplerPrice;
+        document.body.appendChild(para);
+
+        totalPrice +=staplerPurchased*staplerPrice;
+    }
+
+    if(pencilholderPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = pencilholderPurchased  +" pencilholder x "+ pencilholderPrice + " = "+pencilholderPurchased*pencilholderPrice;
+        document.body.appendChild(para);
+
+        totalPrice+=pencilholderPurchased*pencilholderPrice; 
+    }
+
+    if(totalPrice>0){
+        const para = document.createElement("p");
+        para.innerHTML = "Sum: " + totalPrice + "<BR/>"+ "VAT 21%: "+ totalPrice*0.21 +"<BR/>" + "TOTAL: "+totalPrice*1.21;
+        document.body.appendChild(para);
+
+    }
+
     
+
 }
 
