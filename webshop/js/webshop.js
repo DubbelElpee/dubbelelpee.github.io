@@ -1,48 +1,92 @@
-var bin = 8.90;
-var stapler = 12.50;
-var pencilholder = 9.90;
+var binPrice = 8.90;
+var staplerPrice = 12.50;
+var pencilholderPrice = 9.90;
 
-var bin_s=7;
-var stapler_s=4;
-var pencilholder_s =5;
+var binStock=7;
+var staplerStock=4;
+var pencilholderStock =5;
 
-var bin_p=0;
-var stapler_p=0;
-var pencilholder_p=0;
+var binPurchased=0;
+var staplerPurchased=0;
+var pencilholderPurchased=0;
+
+var totalPrice=0;
+
+
 
 function loaded(){   
 
-    document.getElementById("p1").innerText="Price "+bin;
-    document.getElementById("p2").innerText="Price "+stapler;
-    document.getElementById("p3").innerText="Price "+pencilholder;
+    document.getElementById("p1").innerText="Price "+binPrice;
+    document.getElementById("p2").innerText="Price "+staplerPrice;
+    document.getElementById("p3").innerText="Price "+pencilholderPrice;
 
-    document.getElementById("s1").innerText="Stock "+bin_s;
-    document.getElementById("s2").innerText="Stock "+stapler_s;
-    document.getElementById("s3").innerText="Stock "+pencilholder_s;
+    document.getElementById("s1").innerText="Stock "+binStock;
+    document.getElementById("s2").innerText="Stock "+staplerStock;
+    document.getElementById("s3").innerText="Stock "+pencilholderStock;
 
 }
 
 function binBuy() {
+
     console.log('bin');
-    bin_p++;
-    bin_s--;
-    document.getElementById("s1").innerText="Stock "+bin_s;
+    binPurchased++;
+    binStock--;
+    document.getElementById("s1").innerText="Stock "+binStock;
+
+    if(binStock==0){
+        document.getElementById("s1").innerText="OUT OF STOCK";
+        document.getElementById("binBuyButton").style.display="none";
+    }
 
 }
 
 function staplerBuy(){
-    stapler_p++;
-    stapler_s--;
-    document.getElementById("s2").innerText="Stock "+stapler_s;
+    if(staplerStock>0){
+        staplerPurchased++;
+        staplerStock--;
+        document.getElementById("s2").innerText="Stock "+staplerStock;
+    }
 }
 
 function pencilholderBuy(){
-    pencilholder_p++;
-    pencilholder_s--;
-    document.getElementById("s3").innerText="Stock "+pencilholder_s;
+    pencilholderPurchased++;
+    pencilholderStock--;
+    document.getElementById("s3").innerText="Stock "+pencilholderStock;
 }
 
-function checkoutLoaded(){
-    alert("hi");
+function checkOut(){
+    if(binPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = binPurchased  +" bin(s) x "+ binPrice + " = "+binPurchased*binPrice;
+        document.body.appendChild(para);
+
+        totalPrice +=binPurchased*binPrice;
+    }
+
+    if(staplerPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = staplerPurchased  +" stapler(s) x "+ staplerPrice + " = "+staplerPurchased*staplerPrice;
+        document.body.appendChild(para);
+
+        totalPrice +=staplerPurchased*staplerPrice;
+    }
+
+    if(pencilholderPurchased>0){
+        const para = document.createElement("p");
+        para.innerText = pencilholderPurchased  +" pencilholder x "+ pencilholderPrice + " = "+pencilholderPurchased*pencilholderPrice;
+        document.body.appendChild(para);
+
+        totalPrice+=pencilholderPurchased*pencilholderPrice; 
+    }
+
+    if(totalPrice>0){
+        const para = document.createElement("p");
+        para.innerHTML = "Sum: " + totalPrice + "<BR/>"+ "VAT 21%: "+ totalPrice*0.21 +"<BR/>" + "TOTAL: "+totalPrice*1.21;
+        document.body.appendChild(para);
+
+    }
+
+    
+
 }
 
