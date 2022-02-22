@@ -1,30 +1,22 @@
 <!DOCTYPE html> 
 <html> 
+    <header>
+        <script src="js/input.js"></script>
+    </header>
   
 <body> 
+    <h2> Type something and hit button</h2>  
+
+  <input type="text" id="inputField" onkeypress="clickPress(event)" > 
   
-  <h4> 
-      Change the text of the text field  
-      ,and then click the button. 
-  </h4> 
-  
-  <label for="domTextElement">Name: </label>
-  <input type="text" id="inputField" > 
-  
-  <button type="button"  onclick="getValueInput()"> 
+  <button type="button"  onclick="showValue()"> 
       click me!! 
   </button> 
   
-  <p id="output"></p> 
+  <p id="p1"></p> 
+  <p id="p2"></p> 
 
-  <script> 
 
-    const getValueInput = () =>{
-      let inputValue = document.getElementById("inputField").value; 
-      document.getElementById("output").innerHTML = inputValue; 
-    }
-    
-  </script> 
 </body> 
   
 </html> 
