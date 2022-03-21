@@ -12,11 +12,11 @@ var items=[];
 // ADD ITEMS TO SHOP HERE
 items.push(new Item("bin",8, "img/bin.jpg"));
 items.push(new Item("stapler",3,  "img/stapler.jpg"));
-//items.push(new Item("pencilholder", 2, "img/pencilholder.jpg"));
-
+items.push(new Item("pencilholder", 2, "img/pencilholder.jpg"));
+items.push(new Item("dog",5,"img/dog.jpg"));
 //ADD ITEMS IN STOCK FOR EACH ITEM:
-var stockedItems=[3,8,2]; //3 bins, 8 staplers, 2 pencilholders
-var puchasedItems=[0,0,0];
+var stockedItems=[3,8,4,9]; //3 bins, 8 staplers, 2 pencilholders
+var puchasedItems=[0,0,0,0];
 
 var totalPrice = 0;
 
@@ -26,7 +26,19 @@ function loaded() {
     for(var i=0; i<items.length; i++){
         console.log("LOOP #"+i);
         const content = document.createElement("div");
-        content.innerHTML = '<div style="float:left">'+
+
+       //all divs float left, but last div must have diffent float style
+       var c;
+        if(i==items.length-1){
+            c='<div style="clear:both"></div>'
+        }
+        else{
+            c='<div style="float:left"></div>'
+        }
+
+
+
+        content.innerHTML = c+
         '<img src='+items[i].imagePath+' /><br />'+
         '<p id=p'+i+'>Price '+items[i].price+'</p>'+
         '<p id=s'+i+'>In stock:'+stockedItems[i]+'</p>'+
