@@ -6,7 +6,6 @@ class Item {
       this.stock= s;
       this.puchased=pur;
       this.imagePath =imp;
-     
     }
 }
 
@@ -14,9 +13,9 @@ var items=[];
 
 // ADD ITEMS TO SHOP HERE
 items.push(new Item("bin",8, 4,0,"img/bin.jpg"));
-//items.push(new Item("stapler",3,6,0,"img/stapler.jpg"));
+items.push(new Item("stapler",3,6,0,"img/stapler.jpg"));
 items.push(new Item("pencilholder", 2, 3,0,"img/pencilholder.jpg"));
-//items.push(new Item("hole puncher",7,8, 0,"img/holepuncher.jpg"));
+items.push(new Item("hole puncher",7,8, 0,"img/holepuncher.jpg"));
 items.push(new Item("scissors",4,6,0,"img/scissors.jpg"));
 
 
@@ -39,8 +38,6 @@ function loaded() {
             c='<div style="float:left">'
         }
 
-
-
         content.innerHTML = c+
         '<img src='+items[i].imagePath+' /><br />'+
         '<p id=p'+i+'>Price '+items[i].price+'</p>'+
@@ -57,10 +54,10 @@ function buy(it){
     console.log("function buy, item ="+it);
     items[i].stock--;
     items[i].puchased++;
+
+
     document.getElementById('s'+i).innerText="In stock "+items[i].stock;
 }
-
-
 
 function checkOut() {
     for(var i=0;i<items.length;i++){
