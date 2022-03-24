@@ -51,7 +51,7 @@ function checkAnswer(){
 
 function showAnimal(i){
     if(i==animals.length){
-        document.getElementById("Image").remove();
+        document.getElementById("image").remove();
         document.getElementById("feedback").innerText= "The end.. well done!";
     }
     document.getElementById("image").src=animals[i].imagePath;
