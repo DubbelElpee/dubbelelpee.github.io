@@ -86,4 +86,11 @@ function addPlanetName(){
     console.log(planets);
 }
 
+function displayAllPlanets(){
+    var p="";
+    for(var i=0; i< planets.length;i++){
+        p+=planets[i]+" ";
+    }
+    document.getElementById("allPlanets").innerText=p;
+}
 

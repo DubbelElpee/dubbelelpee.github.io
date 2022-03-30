@@ -37,7 +37,7 @@
     <h2>Exercise 3</h2>
     <h3>An aeroplane is an object!</h3>
     <p>Create javascript OBJECTS for the three planes. <br/>
-        Make properties for the image, name and chairs<br/>
+        Make properties for the image, name, speed and chairs<br/>
         The info should be displayed as below, when the button is clicked</p>
     <button onclick="planes()">Show info</button>
     <br/>
@@ -51,6 +51,8 @@
     <h3>Planets in an Array</h3>
     <p>The planets or our solar system are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</p>
     <p>Create an array for the planets and buttons to walk through them!</p>
+    <p>Make sure your index stays within the array </p>
+    <p>TIP: declare and initialize the array OUTSIDE the functions on top of your script</p>
     <br>
     <button onclick="previousPlanet()" style="float:left">Previous</button><h3 id="planets" style="float:left">Mercury</h3> <button onclick="nextPlanet()" style="clear:right">Next</button>
     <br/>
@@ -73,11 +75,23 @@
     <br>
     <hr>
     <h2>Exercise 7</h2>
-    <h3>Planet </h3>
+    <h3>New planet </h3>
     <p>You improved the system and it allows you to add a planet and give it a name</p>
+
     <p>Give name:</p><input type="text" id="planetName">  <button onclick="addPlanetName()">Add planet</button>
+
    
-    <p>When the button is pushed, a new element is added at the end, and it has  the name you put in the inputfield</p>
+    <p>When the button is pushed, a new element is added at the end, and it bears the name you put in the inputfield</p>
+    <br>
+    <hr>
+    <h2>Exercise 8</h2>
+    <h3>Gazing at the planets </h3>
+    <p>We want to know what planets there are now!</p>
+    <p>Make a loop to loop though the planets and display them all</p>
+    <button onclick="displayAllPlanets()">Show planets</button>
+    <p id="allPlanets"></p>
+   
+
     
 
    
