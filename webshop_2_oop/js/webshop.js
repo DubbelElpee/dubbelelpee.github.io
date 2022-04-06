@@ -10,6 +10,10 @@ var binPurchased = 0;
 var staplerPurchased = 0;
 var pencilholderPurchased = 0;
 
+
+var bin= {price:9,name: "bin"}
+
+
 var totalPrice = 0;
 
 

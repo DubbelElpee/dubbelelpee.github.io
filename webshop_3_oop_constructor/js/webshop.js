@@ -7,6 +7,7 @@ class Item {
 }
 
 var bin= new Item("bin",8);
+
 var stapler = new Item("stapler", 3);
 var pencilHolder = new Item("pencilholder", 2);
 
