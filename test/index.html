@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {background-color: rgb(195, 227, 231);}
+        h1, h2,h3,p   {color: black; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        button, p, h1, h2, h3 {margin-top: 0;margin-bottom: 0;}
+    </style>
+</head>
+<body>
+    <h1>John Doe</h1>
+    <p> Replace the name John Doe with your name and display as a header 1!</p>
+    <br/>
+    <hr>
+    <h2>Exercise 1</h2>
+    <h3>Now you see me now you don't</h3>
+    <p>Make the buttons how and hide the image of the dog</p>
+    <button onclick="hideDog()">Hide dog!</button>
+    <button onclick="showDog()">Show dog!</button>
+    <br><br>
+    <img src="img/dog.jpg" id="im">
+    <br/>
+    <hr>
+    <h2>Exercise 2</h2>
+    <h3>Button mania</h3>
+    <p>Give the buttons the proper functions</p>
+    <h2 id="number">0</h2>
+    <button onclick="reset()">Reset to zero</button>
+    <button onclick="addOne()">Plus 1</button>
+    <button onclick="triple()">Triple</button>
+    <br/>
+    <hr>
+    <h2>Exercise 3</h2>
+    <h3>An aeroplane is an object!</h3>
+    <p>Create javascript OBJECTS for the three planes. <br/>
+        Make properties for the image, name, speed and chairs<br/>
+        The info should be displayed as below, when the button is clicked</p>
+    <button onclick="planes()">Show info</button>
+    <br/>
+    <br/>
+    <div id="b737" style="float:left"></div>
+    <div id="b747" style="float:left"></div>
+    <div id="b777" style="clear:right"></div>
+    <br/>
+    <hr>
+    <h2>Exercise 4</h2>
+    <h3>Planets in an Array</h3>
+    <p>The planets or our solar system are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</p>
+    <p>Create an array for the planets and buttons to walk through them!</p>
+    <p>Make sure your index stays within the array </p>
+    <p>TIP: declare and initialize the array OUTSIDE the functions on top of your script</p>
+    <br>
+    <button onclick="previousPlanet()" style="float:left">Previous</button><h3 id="planets" style="float:left">Mercury</h3> <button onclick="nextPlanet()" style="clear:right">Next</button>
+    <br/>
+    <hr>
+    <h2>Exercise 5</h2>
+    <h3>Planet poof!</h3>
+    <p>Poetin creates a button that makes the first planet of the solar system EXPLODE!</p>
+    <p>When the button is pushed, the first element is removed from the array</p>
+    <p>Note that every click removes one more planet!</p>
+    <p>Check the result in Exercise 4</p>
+    <button onclick="removePlanet()">BOOOOOOM!!!</button>
+    <br>
+    <hr>
+    <h2>Exercise 6</h2>
+    <h3>Planet B</h3>
+    <p>You are a scientist and every click on the button creates a new planet</p>
+    <p>Every new planet is simply called 'planet'</p>
+    <p>When the button is pushed, a new element 'planet' is added at the end</p>
+    <button onclick="addPlanet()">Add planet</button>
+    <br>
+    <hr>
+    <h2>Exercise 7</h2>
+    <h3>New planet </h3>
+    <p>You improved the system and it allows you to add a planet and give it a name</p>
+
+    <p>Give name:</p><input type="text" id="planetName">  <button onclick="addPlanetName()">Add planet</button>
+
+   
+    <p>When the button is pushed, a new element is added at the end, and it bears the name you put in the inputfield</p>
+    <br>
+    <hr>
+    <h2>Exercise 8</h2>
+    <h3>Gazing at the planets </h3>
+    <p>We want to know what planets there are now!</p>
+    <p>Make a loop to loop though the planets and display them all</p>
+    <button onclick="displayAllPlanets()">Show planets</button>
+    <p id="allPlanets"></p>
+   
+
+    
+
+   
+
+
+    
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
